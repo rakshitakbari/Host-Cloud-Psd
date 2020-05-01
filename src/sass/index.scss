@@ -1,0 +1,81 @@
+#lms-page-index {
+    background-image: url(../images/banner-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 300px 16px;
+    background-position: center center;
+    @include media-breakpoint-down(xs){
+      padding: 160px 0;
+    }
+    .caption{
+        h2 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0px;
+            margin-bottom: 50px;
+            font-size: 32px;
+            font-weight: 700;
+            color: $white;
+        }
+        #search-section {
+            position: relative;
+            input.searchText {
+                float: left;
+                width: 570px;
+                min-width: 280px;
+                height: 49px;
+                background-color: transparent;
+                border: 1px solid $white;
+                padding: 0px 15px;
+                color: $white;
+                outline: none;
+                font-size: 14px;
+                letter-spacing: 0.5px;
+                margin-bottom: 30px;
+                @include media-breakpoint-down(lg){
+                    float: none;
+                    width: 100%;
+                } 
+            }
+            input.main-button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                outline: none;
+                cursor: pointer;
+                display: inline-block;
+                height: 50px;
+                line-height: 50px;
+                padding: 0px 20px;
+                border: none;
+                margin-left: 10px;
+                background-color: $theme-color;
+                color: $white;
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                transition: all 0.5s;
+                margin-bottom: 30px;
+                @include media-breakpoint-down(lg){
+                  position: absolute;
+                  top: 75px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color: $white;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $white;
+}
+
+::placeholder {
+  color: $white;
+}
